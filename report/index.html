@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coral bleaching robustness report</title>
+<style>body{font:15px system-ui,-apple-system,"Segoe UI",sans-serif;background:#f9f9f7;color:#0b0b0b;margin:0;padding:24px;max-width:1100px;margin:auto}
+section{background:#fcfcfb;border:1px solid #e1e0d9;border-radius:10px;padding:16px;margin:16px 0}img{max-width:100%}
+table{border-collapse:collapse;font-size:13px;width:100%}th,td{border-bottom:1px solid #e1e0d9;padding:6px 8px;text-align:left}th{color:#52514e}</style>
+<h1>Coral bleaching robustness: results</h1>
+<section><h2>Results table (all numbers)</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Run</th>
+      <th>Evaluation set</th>
+      <th>Type</th>
+      <th>Images</th>
+      <th>Accuracy</th>
+      <th>Macro-F1</th>
+      <th>MAE</th>
+      <th>ECE</th>
+      <th>Colour-only F1</th>
+      <th>Grayscale F1</th>
+      <th>Shuffled F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>effb0_noaa</td>
+      <td>noaa (in-domain test)</td>
+      <td>in-domain</td>
+      <td>1565</td>
+      <td>0.868</td>
+      <td>0.857</td>
+      <td>0.132</td>
+      <td>0.089</td>
+      <td>0.799</td>
+      <td>0.766</td>
+      <td>0.790</td>
+    </tr>
+    <tr>
+      <td>effb0_noaa_cast</td>
+      <td>noaa (in-domain test)</td>
+      <td>in-domain</td>
+      <td>1565</td>
+      <td>0.866</td>
+      <td>0.857</td>
+      <td>0.134</td>
+      <td>0.063</td>
+      <td>0.799</td>
+      <td>0.743</td>
+      <td>0.763</td>
+    </tr>
+  </tbody>
+</table></section><section><h2>Overview: in-domain vs cross-dataset</h2><img src="overview.png" alt="Bar charts of macro-F1, MAE and ECE for every run, in-domain versus cross-dataset"></section><section><h2>Confusion matrices: effb0_noaa</h2><img src="confusion_effb0_noaa.png" alt="Confusion matrices for run effb0_noaa"></section><section><h2>Stress tests: effb0_noaa</h2><img src="probes_effb0_noaa.png" alt="Macro-F1 under grayscale and patch-shuffle for run effb0_noaa"></section><section><h2>CNN vs colour-only: effb0_noaa</h2><img src="colour_effb0_noaa.png" alt="CNN versus colour-only baseline for run effb0_noaa"></section><section><h2>Grad-CAM attention: effb0_noaa</h2><img src="gradcam_effb0_noaa.png" alt="Grad-CAM heat maps for run effb0_noaa"></section><section><h2>Confusion matrices: effb0_noaa_cast</h2><img src="confusion_effb0_noaa_cast.png" alt="Confusion matrices for run effb0_noaa_cast"></section><section><h2>Stress tests: effb0_noaa_cast</h2><img src="probes_effb0_noaa_cast.png" alt="Macro-F1 under grayscale and patch-shuffle for run effb0_noaa_cast"></section><section><h2>CNN vs colour-only: effb0_noaa_cast</h2><img src="colour_effb0_noaa_cast.png" alt="CNN versus colour-only baseline for run effb0_noaa_cast"></section><section><h2>Grad-CAM attention: effb0_noaa_cast</h2><img src="gradcam_effb0_noaa_cast.png" alt="Grad-CAM heat maps for run effb0_noaa_cast"></section></html>

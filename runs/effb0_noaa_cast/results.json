@@ -1,0 +1,40 @@
+{
+  "args": {
+    "data_root": "data",
+    "source": "noaa",
+    "targets": "",
+    "arch": "efficientnet_b0",
+    "loss": "ce",
+    "scheme": "binary",
+    "cast": true,
+    "balanced_sampler": false,
+    "pretrained": true,
+    "epochs": 12,
+    "bs": 64,
+    "lr": 0.0003,
+    "size": 224,
+    "seed": 0,
+    "workers": 2,
+    "out": "runs/effb0_noaa_cast"
+  },
+  "best_val_f1": 0.8741981118861529,
+  "eval": {
+    "noaa (in-domain test)": {
+      "n": 1565,
+      "accuracy": 0.8664536741214057,
+      "macro_f1": 0.856817293376916,
+      "mae": 0.13354632587859425,
+      "ece": 0.06275743691685098,
+      "confusion": [
+        [
+          881,
+          93
+        ],
+        [
+          116,
+          475
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+torch
+torchvision
+timm
+scikit-learn
+numpy
+pandas
+pillow
+matplotlib
+gradio
+huggingface_hub
+datasets
+roboflow
